@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sonic_ring.mp3-392bd543ace1460c7eb6176557293855.mp3str"
+
+[deps]
+
+source_file="res://mods/Catvalk.EmeraldCoastA/Assets/sonic_ring.mp3"
+dest_files=[ "res://.import/sonic_ring.mp3-392bd543ace1460c7eb6176557293855.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

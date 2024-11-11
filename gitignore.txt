@@ -1,0 +1,11 @@
+.idea/
+.vs/
+*.user
+/local
+
+*.gdc
+bin/
+obj/
+GDWeave/
+GDWeave.Dumper/
+manifestation/

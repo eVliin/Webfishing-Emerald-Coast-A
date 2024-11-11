@@ -1,0 +1,16 @@
+{
+  "Id": "Catvalk.EmeraldCoastA",
+  "AssemblyPath": null,
+  "PackPath": "Catvalk.EmeraldCoast_A.pck",
+  "Dependencies": [
+    "Sulayre.Lure",
+    "BlueberryWolfi.APIs"
+  ],
+  "Metadata": {
+    "Name": "Emerald Coast A",
+    "Author": "Catvalk",
+    "Version": "3.1.0",
+    "Description": "A messy port of the first area of Emerald Coast from Sonic Adventure",
+    "Homepage": "https://eVliinArt.Catvalk.online"
+  }
+}
