@@ -85,13 +85,13 @@ var state = 0
 var speedboost
 var player_api
 var direction
-var player
+var local_player
 var ramp_raycast
 
 func _ready():
 	# Inicializa as variáveis e configura o RayCast apenas uma vez
 	player_api = get_node_or_null("/root/BlueberryWolfiAPIs/PlayerAPI")
-	player = player_api.local_player
+	local_player = player_api.local_player  # Local player as an actor
 	speedboost = pannel.Speedboost
 	direction = calculate_direction()
 	setup_raycast()  # Cria o RayCast para detectar a rampa apenas uma vez
@@ -108,12 +108,12 @@ func calculate_direction():
 
 func setup_raycast():
 	# Verifica se o RayCast já existe no player, caso contrário, cria-o
-	if player.get_node_or_null("ramp_raycast") == null:
+	if player_api.local_player.get_node_or_null("ramp_raycast") == null:
 		ramp_raycast = RayCast.new()
 		ramp_raycast.cast_to = Vector3(0, -1, 0) * 2.0  # Ajuste o comprimento conforme necessário
 		ramp_raycast.enabled = true
 		ramp_raycast.name = "ramp_raycast"  # Nome para identificar o RayCast
-		player.add_child(ramp_raycast)
+		player_api.local_player.add_child(ramp_raycast)
 
 func handle_speedboost_states(delta):
 	match state:
@@ -121,8 +121,8 @@ func handle_speedboost_states(delta):
 			apply_initial_boost(delta)
 		1:
 			wait_timer += 1
-			player.rotation_degrees = pannel.get_rotation_degrees()
-			ramp_raycast = player.get_node_or_null("ramp_raycast")
+			local_player.rotation_degrees = pannel.get_rotation_degrees()
+			ramp_raycast = local_player.get_node_or_null("ramp_raycast")
 			if ramp_raycast.is_colliding():
 				handle_ramp_movement()  # Executa a lógica de rampa enquanto em estado 1
 			if wait_timer > WAIT_TIME_STEP_1:
@@ -135,8 +135,8 @@ func handle_speedboost_states(delta):
 func apply_initial_boost(delta):
 	wait_timer += 1
 	if wait_timer == 1:
-		player.accel = INITIAL_ACCEL
-		player.velocity = direction * -speedboost
+		local_player.accel = INITIAL_ACCEL
+		local_player.velocity = direction * -speedboost
 		pannelsfx.play()
 		align_camera_rotation()
 		lerp_rotation(delta)
@@ -145,27 +145,27 @@ func apply_initial_boost(delta):
 func align_camera_rotation():
 	# Alinha a rotação da câmera para garantir que siga a direção da plataforma
 	var rot_y = pannel.get_rotation_degrees().y
-	var cam_rot_y = player.cam_base.rotation_degrees.y
+	var cam_rot_y = local_player.cam_base.rotation_degrees.y
 	if cam_rot_y < rot_y + CAMERA_ROTATION_THRESHOLD and cam_rot_y > rot_y - CAMERA_ROTATION_THRESHOLD:
 		return
-	player.cam_base.rotation_degrees.y = rot_y
+	local_player.cam_base.rotation_degrees.y = rot_y
 
 func lerp_rotation(delta):
 	# Suaviza a rotação do jogador
-	player.rotation_degrees = lerp(player.rotation_degrees, pannel.get_rotation_degrees(), delta * DELTA_DAMP)
+	local_player.rotation_degrees = lerp(local_player.rotation_degrees, pannel.get_rotation_degrees(), delta * DELTA_DAMP)
 
 func handle_ramp_movement():
 	var ramp_normal = ramp_raycast.get_collision_normal()
 	if ramp_normal != Vector3(0, 0, 0):
 		var ramp_direction = direction - ramp_normal * direction.dot(ramp_normal)  # Projeção no plano da rampa
-		player.velocity = -ramp_direction * player.velocity.length()
+		local_player.velocity = -ramp_direction * local_player.velocity.length()
 
 func reset_player_state():
-	player.accel = RESET_ACCEL
+	local_player.accel = RESET_ACCEL
 	wait_timer = 0
 	state = 0
 	has_triggered = false
 
 func _on_Area_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") &&  body == local_player:
 		has_triggered = true

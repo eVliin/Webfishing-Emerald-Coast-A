@@ -32,7 +32,7 @@
 [ext_resource path="res://mods/Catvalk.EmeraldCoastA/Scenes/Map/Checkpoints_manage.gd" type="Script" id=30]
 
 [sub_resource type="BoxShape" id=384]
-extents = Vector3( 0.184678, 0.196602, 0.227035 )
+extents = Vector3( 0.184678, 0.205766, 0.227035 )
 
 [sub_resource type="BoxShape" id=315]
 extents = Vector3( 20, 0.5, 20 )
@@ -110,6 +110,10 @@ collision_mask = 9
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 9.49188, -9.88871, 0.573377, -0.0236752, 34.7456, 0.529633, -8.63648, -3.70553, 0.706268, -503.485, 19.9654, -127.348 )
+shape = SubResource( 384 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 12.833, 0, 0, 0, 36.3149, 0, 0, 0, 1.05266, -372.519, 8.21361, -113.208 )
 shape = SubResource( 384 )
 
 [node name="EmeraldCoastA2" parent="." instance=ExtResource( 20 )]
@@ -275,7 +279,7 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -380.585, -7.392, -552.664 )
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -380.585, -6.89, -232.664 )
 
 [node name="water17" parent="ocean_water" instance=ExtResource( 11 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -380.585, -7.392, 87.3364 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -380.585, -6.89, 87.336 )
 
 [node name="water22" parent="ocean_water" instance=ExtResource( 11 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -380.585, -7.392, 407.336 )
@@ -1022,244 +1026,226 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.007, -0.936553, -49.9362 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -293.431, -0.936553, -49.9362 )
 
 [node name="falling_bridge71" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -372.542, -1.03655, -132.699 )
+transform = Transform( -4.37111e-08, -1.52581e-10, 1, -0.00349065, 0.999994, 0, -0.999994, -0.00349065, -4.37114e-08, -372.542, -1.03655, -132.699 )
 
 [node name="falling_bridge72" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -0.55, 0, -2.40413e-08, -372.542, -1.03655, -135.432 )
+transform = Transform( -2.40411e-08, -1.52581e-10, 1, -0.00191986, 0.999994, 0, -0.549997, -0.00349065, -4.37114e-08, -372.542, -1.03655, -135.432 )
 
 [node name="falling_bridge73" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -372.542, -1.03655, -138.149 )
+transform = Transform( -4.37111e-08, -1.52581e-10, 1, -0.00349065, 0.999994, 0, -0.999994, -0.00349065, -4.37114e-08, -372.556, -1.03655, -138.149 )
 
 [node name="falling_bridge74" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -372.542, -1.03655, -119.299 )
+transform = Transform( -4.37111e-08, -1.52581e-10, 1, -0.00349065, 0.999994, 0, -0.999994, -0.00349065, -4.37114e-08, -372.542, -1.03655, -119.299 )
 
 [node name="falling_bridge75" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -0.55, 0, -2.40413e-08, -372.542, -1.03655, -122.032 )
+transform = Transform( -2.40411e-08, -1.52581e-10, 1, -0.00191986, 0.999994, 0, -0.549997, -0.00349065, -4.37114e-08, -372.542, -1.03655, -122.032 )
 
 [node name="falling_bridge76" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -372.542, -1.03655, -124.749 )
+transform = Transform( -4.37111e-08, -1.52581e-10, 1, -0.00349065, 0.999994, 0, -0.999994, -0.00349065, -4.37114e-08, -372.542, -1.03655, -124.749 )
 
 [node name="falling_bridge28" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -346.081, -1.13655, -175.203 )
+transform = Transform( 0.999976, 0.00698126, 0, -0.00698126, 0.999976, 0, 0, 0, 1, -346.081, -1.10364, -175.203 )
 
 [node name="falling_bridge66" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -354.181, -1.13655, -175.203 )
+transform = Transform( 0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, -354.181, -1.10106, -175.203 )
 
 [node name="falling_bridge67" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -357.744, -1.13655, -175.203 )
+transform = Transform( 0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, -357.744, -1.10106, -175.203 )
 
 [node name="falling_bridge68" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -361.311, -1.13655, -175.203 )
+transform = Transform( 0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, -361.311, -1.10106, -175.203 )
 
 [node name="falling_bridge69" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -364.874, -1.12491, -175.203 )
+transform = Transform( 0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, -364.874, -1.08942, -175.203 )
 
 [node name="falling_bridge70" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -368.451, -1.11037, -175.203 )
+transform = Transform( 0.999994, 0.00349065, 0, -0.00349065, 0.999994, 0, 0, 0, 1, -368.451, -1.09451, -175.203 )
 
 [node name="falling_bridge37" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 0.65, 0, 0, 0, 1, 0, 0, 0, 1, -343.408, -1.13655, -175.203 )
+transform = Transform( 0.649984, 0.00698126, 0, -0.00453782, 0.999976, 0, 0, 0, 1, -343.408, -1.0971, -175.203 )
 
 [node name="falling_bridge65" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -340.731, -1.13655, -175.203 )
+transform = Transform( 0.999976, 0.00698126, 0, -0.00698126, 0.999976, 0, 0, 0, 1, -340.731, -1.0971, -175.203 )
 
 [node name="falling_bridge5" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -289.857, -0.936553, -49.9362 )
+transform = Transform( 0.999962, 0.00872654, 0, -0.00872654, 0.999962, 0, 0, 0, 1, -289.857, -0.943906, -49.9362 )
 
 [node name="falling_bridge6" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -286.281, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -286.281, -0.96, -49.9362 )
 
 [node name="falling_bridge7" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -282.707, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -282.707, -0.96, -49.9362 )
 
 [node name="falling_bridge77" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -379.572, -1.03655, -115.346 )
+transform = Transform( -0.999994, 0.00349065, -1.50996e-07, 0.00349065, 0.999994, 0, 1.50995e-07, -5.27074e-10, -1, -379.572, -1.0772, -115.346 )
 
 [node name="falling_bridge83" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -376.005, -1.03655, -115.346 )
+transform = Transform( -0.999994, 0.00349065, -1.50996e-07, 0.00349065, 0.999994, 0, 1.50995e-07, -5.27074e-10, -1, -376.005, -1.08335, -115.346 )
 
 [node name="falling_bridge78" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -383.146, -1.03655, -115.346 )
+transform = Transform( -0.999994, 0.00349065, -1.50996e-07, 0.00349065, 0.999994, 0, 1.50995e-07, -5.27074e-10, -1, -383.146, -1.06858, -115.346 )
 
 [node name="falling_bridge79" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -386.722, -1.03655, -115.346 )
+transform = Transform( -0.999994, 0.00349065, -1.50996e-07, 0.00349065, 0.999994, 0, 1.50995e-07, -5.27074e-10, -1, -386.722, -1.07686, -115.346 )
 
 [node name="falling_bridge80" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -390.295, -1.03655, -115.346 )
+transform = Transform( -0.999918, 0.0128104, -1.50989e-07, 0.0128104, 0.999918, 1.40727e-09, 1.50995e-07, -5.27074e-10, -1, -390.295, -1.06961, -115.346 )
 
 [node name="falling_bridge81" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -393.872, -1.03655, -115.346 )
+transform = Transform( -0.99999, 0.00450293, -1.50996e-07, 0.00450293, 0.99999, 1.52851e-10, 1.50995e-07, -5.27074e-10, -1, -393.872, -1.06801, -115.346 )
 
 [node name="falling_bridge82" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -397.446, -1.03655, -115.346 )
+transform = Transform( -0.999998, 0.0021293, -1.50996e-07, 0.0021293, 0.999998, -2.05559e-10, 1.50995e-07, -5.27074e-10, -1, -397.446, -1.07041, -115.346 )
 
 [node name="falling_bridge84" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -400.346, -1.03655, -115.346 )
+transform = Transform( -0.999961, 0.0088138, -1.50994e-07, 0.0088138, 0.999961, 8.03785e-10, 1.50995e-07, -5.27074e-10, -1, -400.346, -1.05701, -115.346 )
 
 [node name="falling_bridge38" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -82.3239 )
+transform = Transform( -4.37103e-08, -3.05161e-10, -1, -0.00698126, 0.999976, 0, 0.999976, 0.00698126, -4.37114e-08, -336.794, -1.07708, -82.3239 )
 
 [node name="falling_bridge39" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -78.7503 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.794, -1.06828, -78.7503 )
 
 [node name="falling_bridge40" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -75.1737 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.794, -1.06828, -75.1737 )
 
 [node name="falling_bridge41" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -71.6001 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.794, -1.06828, -71.6001 )
 
 [node name="falling_bridge42" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -100.524 )
-
-[node name="falling_bridge46" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -104.143 )
-
-[node name="falling_bridge47" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -112.472 )
+transform = Transform( -4.37103e-08, -3.05161e-10, -1, -0.00698126, 0.999976, 0, 0.999976, 0.00698126, -4.37114e-08, -336.794, -1.12021, -100.524 )
 
 [node name="falling_bridge48" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -116.995 )
+transform = Transform( -5.46379e-08, -3.05161e-10, -1, -0.00872658, 0.999976, 0, 1.24997, 0.00698126, -4.37114e-08, -336.794, -1.07615, -116.995 )
 
 [node name="falling_bridge43" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -96.9503 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13, -96.9503 )
 
 [node name="falling_bridge44" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -93.3737 )
-
-[node name="falling_bridge45" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -89.8001 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.794, -1.13, -93.3737 )
 
 [node name="falling_bridge49" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -104.143 )
+transform = Transform( -4.37097e-08, -3.81449e-10, -1, -0.00872654, 0.999962, 0, 0.999962, 0.00872654, -4.37114e-08, -336.794, -1.08808, -104.12 )
 
 [node name="falling_bridge50" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -112.472 )
-
-[node name="falling_bridge55" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -116.995 )
-
-[node name="falling_bridge56" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -96.9503 )
-
-[node name="falling_bridge57" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -93.3737 )
+transform = Transform( -5.46389e-08, -1.52581e-10, -1, -0.00436331, 0.999994, 0, 1.24999, 0.00349065, -4.37114e-08, -336.794, -1.09053, -112.472 )
 
 [node name="falling_bridge58" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.794, -1.13655, -89.8001 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.794, -1.13, -89.8001 )
 
 [node name="falling_bridge59" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -167.411 )
+transform = Transform( -4.58967e-08, -1.52581e-10, -1, -0.00366518, 0.999994, 0, 1.04999, 0.00349065, -4.37114e-08, -336.794, -1.13, -167.411 )
 
 [node name="falling_bridge64" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -163.631 )
+transform = Transform( -4.58967e-08, -1.52581e-10, -1, -0.00366518, 0.999994, 0, 1.04999, 0.00349065, -4.37114e-08, -336.794, -1.13, -163.631 )
 
 [node name="falling_bridge63" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -171.191 )
+transform = Transform( -4.58958e-08, -3.05161e-10, -1, -0.00733032, 0.999976, 0, 1.04997, 0.00698126, -4.37114e-08, -336.794, -1.109, -171.191 )
 
 [node name="falling_bridge60" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -159.859 )
+transform = Transform( -4.58967e-08, -1.52581e-10, -1, -0.00366518, 0.999994, 0, 1.04999, 0.00349065, -4.37114e-08, -336.794, -1.13, -159.859 )
 
 [node name="falling_bridge61" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -156.104 )
+transform = Transform( -4.58967e-08, -1.52581e-10, -1, -0.00366518, 0.999994, 0, 1.04999, 0.00349065, -4.37114e-08, -336.794, -1.13, -156.104 )
 
 [node name="falling_bridge62" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.05, 0, -4.5897e-08, -336.794, -1.13655, -152.352 )
+transform = Transform( -4.58967e-08, -1.52581e-10, -1, -0.00366518, 0.999994, 0, 1.04999, 0.00349065, -4.37114e-08, -336.794, -1.13, -152.352 )
 
 [node name="falling_bridge51" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -130.52 )
+transform = Transform( -5.46379e-08, -3.05161e-10, -1, -0.00872658, 0.999976, 0, 1.24997, 0.00698126, -4.37114e-08, -336.794, -1.0976, -130.52 )
 
 [node name="falling_bridge52" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -126.053 )
+transform = Transform( -5.46385e-08, -2.28871e-10, -1, -0.00654496, 0.999986, 0, 1.24998, 0.00523596, -4.37114e-08, -336.794, -1.13, -126.053 )
 
 [node name="falling_bridge53" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -143.92 )
+transform = Transform( -5.46389e-08, -1.52581e-10, -1, -0.00436331, 0.999994, 0, 1.24999, 0.00349065, -4.37114e-08, -336.794, -1.13, -143.92 )
 
 [node name="falling_bridge54" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.25, 0, -5.46392e-08, -336.794, -1.13655, -139.453 )
+transform = Transform( -5.46389e-08, -1.52581e-10, -1, -0.00436331, 0.999994, 0, 1.24999, 0.00349065, -4.37114e-08, -336.794, -1.13, -139.453 )
 
 [node name="falling_bridge8" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -279.131, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -279.131, -0.96, -49.9362 )
 
 [node name="falling_bridge29" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -333.589, -1.03655, -50.0796 )
+transform = Transform( 0.999976, 0.00698126, 0, -0.00698126, 0.999976, 0, 0, 0, 1, -333.589, -1.05697, -50.0796 )
 
 [node name="falling_bridge30" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -330.012, -1.03655, -50.0796 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -330.012, -1.07421, -50.0796 )
 
 [node name="falling_bridge31" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -326.439, -1.03655, -50.0796 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -326.439, -1.07421, -50.0796 )
 
 [node name="falling_bridge32" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -322.862, -1.03655, -50.0796 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -322.862, -1.07421, -50.0796 )
 
 [node name="falling_bridge33" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.773, -1.03655, -64.3261 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.773, -1.0537, -64.3261 )
 
 [node name="falling_bridge34" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.773, -1.03655, -60.9654 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.773, -1.0537, -60.9654 )
 
 [node name="falling_bridge35" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.773, -1.03655, -57.5327 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.773, -1.0537, -57.5327 )
 
 [node name="falling_bridge36" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -336.773, -1.03655, -54.0267 )
+transform = Transform( -4.37111e-08, -1.52581e-10, -1, -0.00349065, 0.999994, 0, 0.999994, 0.00349065, -4.37114e-08, -336.773, -1.0537, -54.0267 )
 
 [node name="falling_bridge9" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -275.557, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -275.556, -0.96, -49.9362 )
 
 [node name="falling_bridge10" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -271.981, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -271.98, -0.96, -49.9362 )
 
 [node name="falling_bridge11" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -268.407, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -268.406, -0.96, -49.9362 )
 
 [node name="falling_bridge12" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -264.831, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -264.83, -0.96, -49.9362 )
 
 [node name="falling_bridge13" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -261.257, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -261.257, -0.96, -49.9362 )
 
 [node name="falling_bridge14" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -257.681, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -257.681, -0.96, -49.9362 )
 
 [node name="falling_bridge15" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -254.107, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -254.107, -0.96, -49.9362 )
 
 [node name="falling_bridge16" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -250.531, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -250.531, -0.96, -49.9362 )
 
 [node name="falling_bridge17" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -246.957, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -246.957, -0.96, -49.9362 )
 
 [node name="falling_bridge18" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -243.381, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -243.381, -0.96, -49.9362 )
 
 [node name="falling_bridge19" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -239.807, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -239.807, -0.96, -49.9362 )
 
 [node name="falling_bridge20" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -236.231, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -236.231, -0.96, -49.9362 )
 
 [node name="falling_bridge21" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -232.657, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -232.657, -0.96, -49.9362 )
 
 [node name="falling_bridge22" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -229.081, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -229.081, -0.96, -49.9362 )
 
 [node name="falling_bridge23" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -225.507, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -225.507, -0.96, -49.9362 )
 
 [node name="falling_bridge24" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -221.931, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -221.931, -0.96, -49.9362 )
 
 [node name="falling_bridge25" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -218.357, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -218.357, -0.96, -49.9362 )
 
 [node name="falling_bridge26" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -214.731, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -214.731, -0.96, -49.9362 )
 
 [node name="falling_bridge27" parent="bridge" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -211.157, -0.936553, -49.9362 )
+transform = Transform( 0.999971, 0.0075572, 0, -0.0075572, 0.999971, 0, 0, 0, 1, -211.157, -0.96, -49.9362 )
 
 [node name="rings" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17453, 0 )
@@ -1838,25 +1824,25 @@ transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -367.566,
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -368.866, 0.491201, -175.183 )
 
 [node name="ring219" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -158.786 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -158.786 )
 
 [node name="ring220" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -157.42 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -157.42 )
 
 [node name="ring221" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -156.098 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -156.098 )
 
 [node name="ring222" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -154.731 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -154.731 )
 
 [node name="ring223" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -153.411 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -153.411 )
 
 [node name="ring224" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -151.991 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -151.991 )
 
 [node name="ring225" parent="rings" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 11.0324, -150.691 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -372.447, 0.445934, -150.691 )
 
 [node name="ring226" parent="rings" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -386.212, 0.685975, -115.377 )
@@ -1996,7 +1982,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -316.64
 Speedboost = 30
 
 [node name="pannel10" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -337.163, -0.0984354, -50.3127 )
+transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -337.186, -0.0984354, -50.3127 )
 Speedboost = 30
 
 [node name="pannel11" parent="Dash pannels" instance=ExtResource( 28 )]
@@ -2004,7 +1990,7 @@ transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -
 Speedboost = 30
 
 [node name="pannel12" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -336.48, -0.0984354, -85.1943 )
+transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -336.732, -0.0984354, -85.1943 )
 Speedboost = 30
 
 [node name="pannel13" parent="Dash pannels" instance=ExtResource( 28 )]
@@ -2024,27 +2010,27 @@ transform = Transform( 0.99989, 0, 0.0148522, 0, 1, 0, -0.0148522, 0, 0.99989, -
 Speedboost = 30
 
 [node name="pannel18" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( -0.0148522, 0, 0.99989, 0, 1, 0, -0.99989, 0, -0.0148522, -336.732, -0.124401, -176.131 )
+transform = Transform( -0.0148522, 0, 0.99989, 0, 1, 0, -0.99989, 0, -0.0148522, -336.732, -0.124401, -176.015 )
 Speedboost = 30
 
 [node name="pannel19" parent="Dash pannels" instance=ExtResource( 28 )]
 transform = Transform( -0.0148522, 0, 0.99989, 0, 1, 0, -0.99989, 0, -0.0148522, -349.624, -0.124401, -175.286 )
-Speedboost = 30
+Speedboost = 40
 
 [node name="pannel21" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( -0.99989, 0, -0.0148523, 0, 1, 0, 0.0148523, 0, -0.99989, -372.523, -0.124401, -175.374 )
-Speedboost = 90
+transform = Transform( -0.99989, 0, -0.0148523, 0, 1, 0, 0.0148523, 0, -0.99989, -372.965, -0.124401, -175.374 )
+Speedboost = 85
 
 [node name="pannel22" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( -0.99989, 0, -0.0148523, 0, 1, 0, 0.0148523, 0, -0.99989, -372.466, -0.124401, -139.942 )
+transform = Transform( -0.99989, 0, -0.0148523, 0, 1, 0, 0.0148523, 0, -0.99989, -372.292, -0.124401, -139.942 )
 Speedboost = 30
 
 [node name="pannel23" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( -0.999549, 0, 0.0300325, 0, 1, 0, -0.0300325, 0, -0.999549, -372.461, -0.124401, -127.857 )
-Speedboost = 30
+transform = Transform( -0.999549, 0, 0.0300325, 0, 1, 0, -0.0300325, 0, -0.999549, -372.287, -0.124401, -127.857 )
+Speedboost = 20
 
 [node name="pannel25" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( 0.00616092, 0, 0.999981, 0, 1, 0, -0.999981, 0, 0.00616092, -372.399, -0.107462, -114.751 )
+transform = Transform( 0.00616092, 0, 0.999981, 0, 1, 0, -0.999981, 0, 0.00616092, -371.873, -0.107462, -114.763 )
 Speedboost = 30
 
 [node name="Checkpoints" type="Spatial" parent="."]

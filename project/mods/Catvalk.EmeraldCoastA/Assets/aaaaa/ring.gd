@@ -3,11 +3,17 @@ extends Area
 onready var ring = get_parent()
 onready var ringsfx = get_parent().get_node("AudioStreamPlayer3D")
 
+
+var PlayerAPI
+
 var hastriggered = false
 
 var state = 0
 
 var respawntimer = 0
+
+func _ready():
+	PlayerAPI = get_node_or_null("/root/BlueberryWolfiAPIs/PlayerAPI")
 
 func _process(delta):
 	if hastriggered == true:
@@ -30,7 +36,7 @@ func _process(delta):
 	
 
 func _on_Area_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") && body == PlayerAPI.local_player:
 		hastriggered = true
 	else :
 		return 

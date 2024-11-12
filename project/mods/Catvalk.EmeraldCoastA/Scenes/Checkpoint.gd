@@ -24,6 +24,6 @@ func _update_check():
 
 
 func _on_Checkpoint1_body_entered(body):
-	if body.is_in_group("player") && id != .get_parent().Selected:
+	if body.is_in_group("player") &&  body == PlayerAPI.local_player && id != .get_parent().Selected:
 		.get_parent().Selected = id
 		emit_signal("checkp_area_entered")
