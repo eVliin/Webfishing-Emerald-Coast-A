@@ -24,8 +24,6 @@ func _process(delta):
 				state = 1
 			1:
 				respawntimer += 1
-				if respawntimer == 1:
-					PlayerData.money += 5
 				if respawntimer > 4800:
 					state = 2
 			2:
@@ -36,7 +34,12 @@ func _process(delta):
 	
 
 func _on_Area_body_entered(body):
-	if body.is_in_group("player") && body == PlayerAPI.local_player:
+	if body.is_in_group("player"):
 		hastriggered = true
+		add_money(body)
 	else :
 		return 
+
+func add_money(body):
+	if body == PlayerAPI.local_player:
+		PlayerData.money += 5

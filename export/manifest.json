@@ -2,7 +2,7 @@
   "name": "Emerald_Coast_A",
   "version_number": "3.1.0",
   "description": "A messy port of the first area of Emerald Coast from Sonic Adventure",
-  "website_url": "https://evliinart.catvalk.online/",
+  "website_url": "https://github.com/eVliin/Webfishing-Emerald-Coast-A",
   "dependencies": [
     "Sulayre-Lure-4.1.0",
     "BlueberryWolfi-BlueberryWolfiAPIs-1.0.2"

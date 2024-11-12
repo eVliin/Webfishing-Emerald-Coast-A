@@ -137,7 +137,6 @@ func apply_initial_boost(delta):
 	if wait_timer == 1:
 		local_player.accel = INITIAL_ACCEL
 		local_player.velocity = direction * -speedboost
-		pannelsfx.play()
 		align_camera_rotation()
 		lerp_rotation(delta)
 		state = 1
@@ -169,3 +168,5 @@ func reset_player_state():
 func _on_Area_body_entered(body):
 	if body.is_in_group("player") &&  body == local_player:
 		has_triggered = true
+	elif body.is_in_group("player"):
+		pannelsfx.play()
