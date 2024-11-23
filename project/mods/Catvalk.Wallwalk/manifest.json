@@ -1,0 +1,10 @@
+{
+    "Id": "WallWalk",
+    "AssemblyPath": "WallWalk.dll",
+    "Metadata": {
+        "Name": "WallWalk",
+        "Author": "Catvalk",
+        "Version": "0.0.1",
+        "Description": "Slide like a penguin and race yer frens! :3"
+    }
+}

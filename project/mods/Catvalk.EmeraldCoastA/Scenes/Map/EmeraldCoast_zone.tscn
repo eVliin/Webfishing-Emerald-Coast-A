@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://mods/Catvalk.EmeraldCoastA/Assets/aaaaa/spring.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Map/Props/hub_building.tscn" type="PackedScene" id=2]
@@ -89,11 +89,17 @@ extents = Vector3( 1.97656, 100, 527.708 )
 [sub_resource type="BoxShape" id=375]
 extents = Vector3( 20.1075, 100, 385.864 )
 
+[sub_resource type="BoxShape" id=388]
+extents = Vector3( 1.81377, 0.0703729, 1.77827 )
+
+[sub_resource type="BoxShape" id=389]
+extents = Vector3( 1, 0.233876, 1.76971 )
+
 [sub_resource type="BoxShape" id=386]
 extents = Vector3( 0.104965, 0.248394, 1.62114 )
 
 [sub_resource type="BoxShape" id=387]
-extents = Vector3( 0.248117, 3.83441, 8.78537 )
+extents = Vector3( 0.248117, 3.83441, 9.17822 )
 
 [node name="main_zone" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0 )
@@ -802,22 +808,16 @@ transform = Transform( 0.894147, 0.447775, 0, -0.447775, 0.894147, 0, 0, 0, 1, 1
 transform = Transform( 0.301931, -0.880137, 0.366329, 0.935632, 0.347274, 0.0632008, -0.182842, 0.323667, 0.928337, 139.934, 6.76185, -133.986 )
 
 [node name="mushroom_8" parent="springs" instance=ExtResource( 1 )]
-transform = Transform( 1.09798, 0.485558, 0, -0.609847, 0.874205, 0, 0, 0, 2.05855, 57.9005, 5.89658, -118.121 )
-
-[node name="mushroom_9" parent="springs" instance=ExtResource( 1 )]
-transform = Transform( 1.13686, 0.424963, 0.0187409, -0.533833, 0.905138, 0.0173662, -0.00584687, -0.0115056, 2.0584, -49.6356, 6.18593, -94.4316 )
+transform = Transform( 1.09798, 0.485558, 0, -0.609847, 0.874205, 0, 0, 0, 2.05855, 57.9005, 0.0212696, -118.121 )
 
 [node name="mushroom_9-5" parent="springs" instance=ExtResource( 1 )]
-transform = Transform( 1.13686, 0.424963, 0.0187409, -0.533833, 0.905138, 0.0173662, -0.00584687, -0.0115056, 2.0584, -129.413, 1.21541, -103.232 )
+transform = Transform( 1.13686, 0.424963, 0.0187409, -0.533833, 0.905138, 0.0173662, -0.00584687, -0.0115056, 2.0584, -120.121, 1.21541, -103.232 )
 
 [node name="mushroom_11" parent="springs" instance=ExtResource( 1 )]
 transform = Transform( 1.13481, 0.424806, -0.115961, -0.533833, 0.905138, 0.0173662, 0.0685399, 0.0163204, 2.05521, -156.094, 2.07659, -49.8135 )
 
 [node name="mushroom_12" parent="springs" instance=ExtResource( 1 )]
 transform = Transform( -5.49004e-08, 0, -2.05855, 0, 1, 0, 1.25597, 0, -8.99823e-08, -372.479, -2.52573, -167.49 )
-
-[node name="mushroom_13" parent="springs" instance=ExtResource( 1 )]
-transform = Transform( 1.25597, 0, 0, 0, 1, 0, 0, 0, 2.05855, -408.6, 0.326254, -115.386 )
 
 [node name="mushroom_10" parent="springs" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -496.47, 6.15273, -122.537 )
@@ -1955,15 +1955,34 @@ Speedboost = 30
 
 [node name="pannel3" parent="Dash pannels" instance=ExtResource( 28 )]
 transform = Transform( 0.005832, -0.21325, 0.97698, -0.00358495, 0.976986, 0.213273, -0.999977, -0.00474623, 0.00493329, -101.789, 8.84956, -91.9755 )
-Speedboost = 30
+Speedboost = 40
+
+[node name="ramp_1" parent="Dash pannels" instance=ExtResource( 28 )]
+transform = Transform( -0.0220941, 0.23018, 0.972897, -0.0158369, 0.973024, -0.23057, -2.02538, -0.0179143, -0.0417572, -47.868, 6.17793, -94.4598 )
+Speedboost = 75
+
+[node name="5_0006-mesh-1006-mat-3002_01_16_16011" parent="Dash pannels/ramp_1" index="0"]
+visible = false
+
+[node name="Area" parent="Dash pannels/ramp_1" index="1"]
+WAIT_TIME_STEP_2 = 5
+
+[node name="CollisionShape" parent="Dash pannels/ramp_1/Area" index="0"]
+transform = Transform( 1, 9.31323e-10, 0, -1.86265e-09, 1, -4.06289e-08, -7.45058e-09, -3.63798e-10, 1, 0.0116501, -0.0214281, -0.713219 )
 
 [node name="pannel4" parent="Dash pannels" instance=ExtResource( 28 )]
 transform = Transform( -0.0871558, 0, -0.996195, 0, 1, 0, 0.996195, 0, -0.0871558, -141.504, -0.0758078, -105.038 )
-Speedboost = 30
+Speedboost = 87
+
+[node name="Area" parent="Dash pannels/pannel4" index="1"]
+WAIT_TIME_STEP_2 = 5
 
 [node name="pannel5" parent="Dash pannels" instance=ExtResource( 28 )]
-transform = Transform( -0.052092, 0, -0.998642, 0, 1, 0, 0.998642, 0, -0.052092, -141.772, -0.0235094, -103.126 )
-Speedboost = 30
+transform = Transform( -0.0490764, 0, -0.998795, 0, 1, 0, 0.998795, 0, -0.0490764, -141.538, -0.0758078, -103.225 )
+Speedboost = 87
+
+[node name="Area" parent="Dash pannels/pannel5" index="1"]
+WAIT_TIME_STEP_2 = 5
 
 [node name="pannel6" parent="Dash pannels" instance=ExtResource( 28 )]
 transform = Transform( -0.0685236, -0.0974266, 0.992881, -0.00670793, 0.995243, 0.0971954, -0.997627, 0, -0.0688511, -132.6, 0.218393, -40.3183 )
@@ -2033,6 +2052,13 @@ Speedboost = 20
 transform = Transform( 0.00616092, 0, 0.999981, 0, 1, 0, -0.999981, 0, 0.00616092, -371.873, -0.107462, -114.763 )
 Speedboost = 30
 
+[node name="ramp_4" parent="Dash pannels" instance=ExtResource( 28 )]
+transform = Transform( 0.00576331, 0.353426, 0.935445, -0.00217743, 0.935463, -0.353419, -2.19212, 0, 0.0135058, -406.025, 0.240089, -115.444 )
+Speedboost = 60
+
+[node name="5_0006-mesh-1006-mat-3002_01_16_16011" parent="Dash pannels/ramp_4" index="0"]
+visible = false
+
 [node name="Checkpoints" type="Spatial" parent="."]
 script = ExtResource( 30 )
 
@@ -2065,6 +2091,19 @@ visible = false
 [node name="5_0006-mesh-1006-mat-3002_01_16_16007" parent="Checkpoints/Checkpoint5/checkpoint" index="3"]
 visible = false
 
+[node name="StaticBody7" type="StaticBody" parent="."]
+transform = Transform( 0.996949, 0, 0.0780589, 0, 1, 0, -0.0780589, 0, 0.996949, -48.8929, 6.93194, -94.4661 )
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody7"]
+transform = Transform( 0.568724, 0.820335, -0.060035, -0.82201, 0.569443, -0.00601607, 0.0292513, 0.0527707, 0.998179, -1.19085, -0.103341, -0.0505142 )
+shape = SubResource( 388 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody7"]
+transform = Transform( 0.919169, 0.390184, -0.0537378, -0.390782, 0.920483, -0.000676862, 0.0492006, 0.0216219, 0.998556, -0.707352, -0.311619, -0.00444031 )
+shape = SubResource( 389 )
+
 [node name="StaticBody2" type="StaticBody" parent="."]
 transform = Transform( 0.996949, 0, 0.0780589, 0, 1, 0, -0.0780589, 0, 0.996949, -48.8929, 6.93194, -94.4661 )
 collision_layer = 9
@@ -2089,7 +2128,7 @@ collision_layer = 9
 collision_mask = 9
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody5"]
-transform = Transform( 0.84899, 0.10932, 0.516977, -0.12448, 0.992208, -0.00538887, -0.513538, -0.0597781, 0.855983, -0.238777, 1.06781, 0.46904 )
+transform = Transform( 0.898879, 0.115068, 0.422821, -0.12448, 0.992208, -0.00538887, -0.420147, -0.0477887, 0.906198, 0.00273132, 1.06781, 1.45872 )
 shape = SubResource( 387 )
 
 [node name="StaticBody4" type="StaticBody" parent="."]
@@ -2101,6 +2140,18 @@ collision_mask = 9
 transform = Transform( 0.525492, -0.846264, -0.087778, 0.849622, 0.527395, 0.00175521, 0.0448079, -0.0755001, 0.996147, 1.76611, -1.07021, 0.167847 )
 shape = SubResource( 386 )
 
-[editable path="ocean_water/water"]
+[node name="StaticBody6" type="StaticBody" parent="."]
+transform = Transform( 0.996949, 0, 0.0780589, 0, 1, 0, -0.0780589, 0, 0.996949, -373.752, 0.966777, -167.968 )
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody6"]
+transform = Transform( 0.0231984, -0.0847488, 0.996143, 0.9681, 0.250573, -0.00122745, -0.249501, 0.964387, 0.0878582, 1.42801, -1.15507, -0.625992 )
+shape = SubResource( 386 )
+
+[editable path="Dash pannels/ramp_1"]
+[editable path="Dash pannels/pannel4"]
+[editable path="Dash pannels/pannel5"]
+[editable path="Dash pannels/ramp_4"]
 [editable path="Checkpoints/Checkpoint5"]
 [editable path="Checkpoints/Checkpoint5/checkpoint"]
